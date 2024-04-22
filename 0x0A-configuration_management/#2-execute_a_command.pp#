@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+#executes a command
+exec {'pkill Killmeno':
+	Path => '/usr/bin:/usr/sbin:/bin'
