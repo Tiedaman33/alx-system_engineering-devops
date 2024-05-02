@@ -41,5 +41,5 @@ frontend myfrontend
 
 backend dasilva-backend
 	balance roundrobin
-	server web-01 54.144.46.99:80 check
-	server web-02 54.209.42.65:80 check
+	server web-01 100.26.153.246:80 check
+	server web-02 100.25.190.67:80 check
