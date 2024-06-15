@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-api_key="b94e4fa4f3946d2757b71a0ee858fd1e"
-app_key="eac70854f5ad5acaf9f9624ab2ce9298a05c04a8"
-
-curl -X GET "https://api.datadoghq.com/api/v1/dashboard" \
--H "Content-Type: application/json" \
--H "DD-API-KEY: $api_key" \
--H "DD-APPLICATION-KEY: $app_key"
