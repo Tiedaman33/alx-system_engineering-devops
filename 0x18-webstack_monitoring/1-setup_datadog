@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Replace with your Datadog API key and your JSON configuration file path
+DATADOG_API_KEY="your_datadog_api_key_here"
+DASHBOARD_JSON_FILE="dashboard.json"
+
+# Create the dashboard using Datadog API and capture dashboard ID
+dashboard_id=$(curl -X POST "https://api.datadoghq.com/api/v1/dashboard?api_key=${DATADOG_API_KEY}" \
+              -H "Content-Type: application/json" \
+              -d "@${DASHBOARD_JSON_FILE}" \
+              | jq -r '.dash.id')
+
+# Store the dashboard ID in 2-setup_datadog file
+echo "${dashboard_id}" > 2-setup_datadog
+
+echo "Dashboard ID ${dashboard_id} stored in 2-setup_datadog"
